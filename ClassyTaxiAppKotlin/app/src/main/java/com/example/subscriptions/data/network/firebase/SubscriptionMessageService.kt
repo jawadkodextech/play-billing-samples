@@ -29,7 +29,10 @@ class SubscriptionMessageService : FirebaseMessagingService() {
         private const val REMOTE_MESSAGE_SUBSCRIPTIONS_KEY = "currentStatus"
     }
 
-    override fun onMessageReceived(remoteMessage: RemoteMessage?) {
+    override fun onNewToken(p0: String) {
+        super.onNewToken(p0)
+    }
+    override fun onMessageReceived(remoteMessage: RemoteMessage) {
         remoteMessage?.data?.let {
             val data = it
             if (data.isNotEmpty()) {

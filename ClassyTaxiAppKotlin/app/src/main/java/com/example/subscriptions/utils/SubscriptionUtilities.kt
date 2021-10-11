@@ -49,7 +49,7 @@ fun basicTextForSubscription(res: Resources, subscription: SubscriptionStatus): 
         text
     } else {
         // No local record, so the subscription cannot be managed on this device.
-        text + "*"
+        "$text*"
     }
 }
 
@@ -76,6 +76,6 @@ fun premiumTextForSubscription(res: Resources, subscription: SubscriptionStatus)
         text
     } else {
         // No local record, so the subscription cannot be managed on this device.
-        text + "*"
+        "$text*"
     }
 }

@@ -1,53 +1,150 @@
 {
-  "_comment": "TODO, replace this file with your own version",
   "project_info": {
-    "project_number": "TODO:Add your project number here",
-    "project_id": "TODO: add your project id"
+    "project_number": "1014383311234",
+    "project_id": "glittercustomer-1627712528964",
+    "storage_bucket": "glittercustomer-1627712528964.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1234567890:android:321abc456def7890",
+        "mobilesdk_app_id": "1:1014383311234:android:b3137c9b0f592e3275779b",
         "android_client_info": {
-          "package_name": "com.example.subscriptions.classytaxi"
+          "package_name": "com.dev.glitterupsapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "",
+          "client_id": "1014383311234-1t445ckjcr6t10ogaf55al9nl023mlh9.apps.googleusercontent.com",
           "client_type": 3
-        },
-        {
-          "client_id": "",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.subscriptions",
-            "certificate_hash": ""
-          }
         }
       ],
       "api_key": [
         {
-          "current_key": "TODO: Add your key"
+          "current_key": "AIzaSyDUWrJoh1jDdFE6ciMhII9vfjsxC7e9QIc"
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 2,
-          "analytics_property": {
-            "tracking_id": ""
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1014383311234-1t445ckjcr6t10ogaf55al9nl023mlh9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1014383311234-5l0ajt7d9hleg4fh83f7k1kukcvt1pkn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "dev.glitter.com.GlitterIOS"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1014383311234:android:1c0b1fc4a4d6c5ae75779b",
+        "android_client_info": {
+          "package_name": "com.ecommerce.omia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1014383311234-brfeu8965g0rovlos937de2b2e88mu1d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ecommerce.omia",
+            "certificate_hash": "b2bb4ec2565146448a4c08f0a6d0769c6b0d0c5b"
           }
         },
+        {
+          "client_id": "1014383311234-1t445ckjcr6t10ogaf55al9nl023mlh9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUWrJoh1jDdFE6ciMhII9vfjsxC7e9QIc"
+        }
+      ],
+      "services": {
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1014383311234-1t445ckjcr6t10ogaf55al9nl023mlh9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1014383311234-5l0ajt7d9hleg4fh83f7k1kukcvt1pkn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "dev.glitter.com.GlitterIOS"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1014383311234:android:3894a6b8b84a649475779b",
+        "android_client_info": {
+          "package_name": "com.kodextech.glitterupsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1014383311234-0pe5ah429rv2j2uq7c851qtgfp1bnjh3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kodextech.glitterupsapp",
+            "certificate_hash": "4f49b47c91091ebc38bfef582a5625c1a3e5487f"
+          }
         },
-        "ads_service": {
-          "status": 1
+        {
+          "client_id": "1014383311234-dvv2csqgu0v3082t17pu9711d17gps5d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kodextech.glitterupsapp",
+            "certificate_hash": "0ad975f2b12d148db76f95324d96099cca45cb2a"
+          }
+        },
+        {
+          "client_id": "1014383311234-pdr8k07peq1h5utllt3sme9g7p6hso1h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kodextech.glitterupsapp",
+            "certificate_hash": "b30bd1fe0d818f6d84a64dc2c5d337df85eb19a2"
+          }
+        },
+        {
+          "client_id": "1014383311234-1t445ckjcr6t10ogaf55al9nl023mlh9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUWrJoh1jDdFE6ciMhII9vfjsxC7e9QIc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1014383311234-1t445ckjcr6t10ogaf55al9nl023mlh9.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1014383311234-5l0ajt7d9hleg4fh83f7k1kukcvt1pkn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "dev.glitter.com.GlitterIOS"
+              }
+            }
+          ]
         }
       }
     }
   ],
   "configuration_version": "1"
 }
-

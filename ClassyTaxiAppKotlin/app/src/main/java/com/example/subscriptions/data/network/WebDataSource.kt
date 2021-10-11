@@ -16,7 +16,7 @@
 
 package com.example.subscriptions.data.network
 
-import android.arch.lifecycle.LiveData
+import androidx.lifecycle.LiveData
 import com.example.subscriptions.AppExecutors
 import com.example.subscriptions.data.SubscriptionStatus
 import com.example.subscriptions.data.network.firebase.ServerFunctions

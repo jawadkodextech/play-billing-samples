@@ -17,6 +17,7 @@
 package com.example.subscriptions
 
 import android.app.Application
+import androidx.multidex.MultiDexApplication
 import com.example.subscriptions.Constants.Companion.USE_FAKE_SERVER
 import com.example.subscriptions.billing.BillingClientLifecycle
 import com.example.subscriptions.data.DataRepository
@@ -25,11 +26,12 @@ import com.example.subscriptions.data.disk.db.AppDatabase
 import com.example.subscriptions.data.network.WebDataSource
 import com.example.subscriptions.data.network.firebase.FakeServerFunctions
 import com.example.subscriptions.data.network.firebase.ServerFunctions
+import com.google.firebase.FirebaseApp
 
 /**
  * Android Application class. Used for accessing singletons.
  */
-class SubApp : Application() {
+class SubApp : MultiDexApplication() {
 
     private val executors = AppExecutors()
 
@@ -57,4 +59,9 @@ class SubApp : Application() {
     val repository: DataRepository
         get() = DataRepository.getInstance(localDataSource, webDataSource, billingClientLifecycle)
 
+
+    override fun onCreate() {
+        super.onCreate()
+        FirebaseApp.initializeApp(this)
+    }
 }

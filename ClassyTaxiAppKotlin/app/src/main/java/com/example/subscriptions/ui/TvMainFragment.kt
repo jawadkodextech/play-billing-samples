@@ -16,21 +16,21 @@
 
 package com.example.subscriptions.ui
 
-import android.arch.lifecycle.Observer
-import android.arch.lifecycle.ViewModelProviders
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
 import android.content.Intent
 import android.graphics.Bitmap
 import android.os.Bundle
-import android.support.v17.leanback.app.BackgroundManager
-import android.support.v17.leanback.app.DetailsSupportFragment
-import android.support.v17.leanback.widget.Action
-import android.support.v17.leanback.widget.ArrayObjectAdapter
-import android.support.v17.leanback.widget.ClassPresenterSelector
-import android.support.v17.leanback.widget.DetailsOverviewRow
-import android.support.v17.leanback.widget.FullWidthDetailsOverviewRowPresenter
-import android.support.v17.leanback.widget.SparseArrayObjectAdapter
-import android.support.v4.app.Fragment
-import android.support.v4.content.ContextCompat
+import androidx.leanback.app.BackgroundManager
+import androidx.leanback.app.DetailsSupportFragment
+import androidx.leanback.widget.Action
+import androidx.leanback.widget.ArrayObjectAdapter
+import androidx.leanback.widget.ClassPresenterSelector
+import androidx.leanback.widget.DetailsOverviewRow
+import androidx.leanback.widget.FullWidthDetailsOverviewRowPresenter
+import androidx.leanback.widget.SparseArrayObjectAdapter
+import androidx.fragment.app.Fragment
+import androidx.core.content.ContextCompat
 import android.util.DisplayMetrics
 import android.util.Log
 import android.view.Gravity
@@ -38,10 +38,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.FrameLayout
+import android.widget.ImageView
 import android.widget.ProgressBar
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.DataSource
+import com.bumptech.glide.load.engine.GlideException
+import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.RequestOptions
 import com.bumptech.glide.request.target.SimpleTarget
+import com.bumptech.glide.request.target.Target
 import com.bumptech.glide.request.transition.Transition
 import com.example.subscriptions.R
 import com.example.subscriptions.billing.isAccountHold
@@ -218,13 +223,36 @@ class TvMainFragment : DetailsSupportFragment() {
             .asBitmap()
             .load(R.drawable.tv_background_img)
             .apply(options)
-            .into(object : SimpleTarget<Bitmap>(metrics.widthPixels, metrics.heightPixels) {
+            .addListener(object :RequestListener<Bitmap>{
+                override fun onLoadFailed(
+                    e: GlideException?,
+                    model: Any?,
+                    target: Target<Bitmap>?,
+                    isFirstResource: Boolean
+                ): Boolean {
+                    backgroundManager.setThemeDrawableResourceId(R.drawable.tv_background_img)
+                    return false
+                }
+
                 override fun onResourceReady(
-                    resource: Bitmap,
-                    transition: Transition<in Bitmap>) {
+                    resource: Bitmap?,
+                    model: Any?,
+                    target: Target<Bitmap>?,
+                    dataSource: DataSource?,
+                    isFirstResource: Boolean
+                ): Boolean {
                     backgroundManager.setBitmap(resource)
+                    return false
                 }
             })
+            .into(ImageView(this.context))
+//        object : SimpleTarget<Bitmap>(metrics.widthPixels, metrics.heightPixels) {
+//            override fun onResourceReady(
+//                resource: Bitmap,
+//                transition: Transition<in Bitmap>) {
+//                backgroundManager.setBitmap(resource)
+//            }
+//        }
     }
 
     /**
@@ -329,13 +357,37 @@ class TvMainFragment : DetailsSupportFragment() {
             .asBitmap()
             .load(url)
             .apply(options)
-            .into(object : SimpleTarget<Bitmap>() {
+            .addListener(object :RequestListener<Bitmap>{
+                override fun onLoadFailed(
+                    e: GlideException?,
+                    model: Any?,
+                    target: Target<Bitmap>?,
+                    isFirstResource: Boolean
+                ): Boolean {
+//                    detailsOverviewRow.imageDrawable
+//                    backgroundManager.setThemeDrawableResourceId(R.drawable.tv_background_img)
+                    return false
+                }
+
                 override fun onResourceReady(
-                    resource: Bitmap,
-                    transition: Transition<in Bitmap>) {
+                    resource: Bitmap?,
+                    model: Any?,
+                    target: Target<Bitmap>?,
+                    dataSource: DataSource?,
+                    isFirstResource: Boolean
+                ): Boolean {
                     detailsOverviewRow.setImageBitmap(requireActivity(), resource)
+                    return false
                 }
             })
+            .into(ImageView(this.context))
+//            .into(object : SimpleTarget<Bitmap>() {
+//                override fun onResourceReady(
+//                    resource: Bitmap,
+//                    transition: Transition<in Bitmap>) {
+//                    detailsOverviewRow.setImageBitmap(requireActivity(), resource)
+//                }
+//            })
     }
 
     /**

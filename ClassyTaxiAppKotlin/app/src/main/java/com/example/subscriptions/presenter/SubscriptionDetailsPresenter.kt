@@ -16,7 +16,7 @@
 
 package com.example.subscriptions.presenter
 
-import android.support.v17.leanback.widget.AbstractDetailsDescriptionPresenter
+import androidx.leanback.widget.AbstractDetailsDescriptionPresenter
 import android.text.TextUtils
 
 import com.example.subscriptions.data.SubscriptionContent

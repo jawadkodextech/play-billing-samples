@@ -17,7 +17,7 @@
 package com.example.subscriptions.ui
 
 import android.app.Application
-import android.arch.lifecycle.AndroidViewModel
+import androidx.lifecycle.AndroidViewModel
 import android.util.Log
 import com.android.billingclient.api.BillingFlowParams
 import com.android.billingclient.api.Purchase
